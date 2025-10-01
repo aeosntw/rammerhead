@@ -1,7 +1,10 @@
 [package]
-name = "rammerhead-proxy"
+name = "rammerhead"
 version = "0.1.0"
-description = "A Rammerhead web proxy"
 
 [build]
-kind = "docker"
+builder = "docker"
+dockerfile = "./Dockerfile"
+
+[run]
+command = "node src/server.js"
